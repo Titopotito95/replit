@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-black text-white;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  @apply min-h-screen bg-black;
+}
+
+.link-hover {
+  @apply transition-colors duration-200 hover:text-blue-400;
+}
+
+.btn-primary {
+  @apply px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 rounded-lg text-xl font-semibold transition shadow-lg hover:shadow-blue-500/20;
+}
+
+.btn-secondary {
+  @apply px-8 py-4 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-xl font-semibold transition border border-gray-700;
+}
+
+/* Fix for mobile responsiveness */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+}
+
+/* Fix for header spacing */
+.pt-header {
+  padding-top: 5rem;
+}
+
+/* Fix for footer positioning */
+.footer-fixed {
+  @apply fixed bottom-0 w-full;
+}
